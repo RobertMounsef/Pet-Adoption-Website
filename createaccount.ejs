@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="website_outline.css">
+</head>
+<body>
+
+  <%- include('../views/partials/header.ejs') %>
+    <div class="container">
+
+      <div class="side-menu">
+        <nav>
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/findpet">Find a dog/cat</a></li>
+            <li><a href="/dogcare">Dog Care</a></li>
+            <li><a href="/catcare">Cat Care</a></li>
+            <li><a href="/createaccount">Create account</a></li>
+            <li><a href="/giveawayapet">Giveaway A Pet</a></li>
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/logout">Log Out</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+        <div class="content">
+            <h1>Create Account</h1>
+            <% if (errorMessage) { %>
+                <p style="color: red;"><%= errorMessage %></p>
+            <% } else if (successMessage) { %>
+                <p style="color: green;"><%= successMessage %></p>
+            <% } %>
+            <form action="/createaccount" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <p>Allowed formats for username and password:</p>
+                <p>- Username can contain letters (both upper and lower case) and digits only.</p>
+                <p>- Password must be at least 4 characters long, with at least one letter and one digit.</p>
+                <button type="submit">Create Account</button>
+            </form>
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <%- include('../views/partials/footer.ejs') %>
+
+</body>
+</html>

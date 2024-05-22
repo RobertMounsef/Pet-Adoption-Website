@@ -1,0 +1,26 @@
+
+<header id="mainHeader">
+  <p id= "currentDateTime" style="text-align: right; padding-right: 10px"></p>
+<table class="center">
+<tr>
+  <td> <a href="/home">
+    <h1>Robert's Pet Adoption Center</h1>
+  </a></td>
+  <td><a href= "/home">
+    <img src="logo.png" alt="Adopt A-Cat/Dog" style="width:200px;height:100px;">
+  </a>
+</td>
+</tr>
+</table>
+
+</header>
+<script>
+  
+function updateTime() {
+    var now = new Date();
+    var dateTimeString = now.toLocaleString('en-US', { hour12: true });
+    document.getElementById('currentDateTime').innerText = dateTimeString;
+        }
+
+        setInterval(updateTime, 1);
+</script>

@@ -1,0 +1,28 @@
+[
+  {
+    "username": "Elias",
+    "email": "robertmounsef2005@gmail.com",
+    "petType": "dog",
+    "breed": "German Shepperd",
+    "petName": "Michael",
+    "petAge": "2",
+    "petGender": "male",
+    "childrenFriendly": "yes",
+    "catsFriendly": "yes",
+    "dogsFriendly": "yes",
+    "description": "yyygy"
+  },
+  {
+    "username": "Joey",
+    "email": "robertmounsef2005@gmail.com",
+    "petType": "dog",
+    "breed": "poodle",
+    "petName": "draco",
+    "petAge": "2",
+    "petGender": "male",
+    "childrenFriendly": "no",
+    "catsFriendly": "no",
+    "dogsFriendly": "no",
+    "description": "crazy dawg"
+  }
+]

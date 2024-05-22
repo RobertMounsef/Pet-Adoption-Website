@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Cat/Dog</title>
+    <link rel="stylesheet" type="text/css" href="website_outline.css">
+</head>
+<body>
+
+  <%- include('../views/partials/header.ejs') %>
+    <div class="container">
+
+      <div class="side-menu">
+        <nav>
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/findpet">Find a dog/cat</a></li>
+            <li><a href="/dogcare">Dog Care</a></li>
+            <li><a href="/catcare">Cat Care</a></li>
+            <li><a href="/createaccount">Create account</a></li>
+            <li><a href="/giveawayapet">Giveaway A Pet</a></li>
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/logout">Log Out</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+        <div class="content">
+            <h1>Find a Cat/Dog</h1>
+            <p>Leave a field blank if you have no preference</p>
+            <form action="/findpetresults" method="POST">
+                <label for="petType">Type of Pet:</label>
+                <select id="petType" name="petType" required>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select><br><br>
+                
+                <label for="breed">Breed:</label>
+                <input type="text" id="breed" name="breed"><br><br>
+                
+                <label for="petAge">Age of Pet:</label>
+                <input type="number" id="petAge" name="petAge"><br><br>
+                
+                <label for="petGender">Gender of Pet:</label>
+                <select id="petGender" name="petGender">
+                    <option value="">Any</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                
+                <label for="childrenFriendly">Children Friendly:</label>
+                <select id="childrenFriendly" name="childrenFriendly">
+                    <option value="">Any</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br>
+                
+                <label for="catsFriendly">Cats Friendly:</label>
+                <select id="catsFriendly" name="catsFriendly">
+                    <option value="">Any</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br>
+                
+                <label for="dogsFriendly">Dogs Friendly:</label>
+                <select id="dogsFriendly" name="dogsFriendly">
+                    <option value="">Any</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+    <%- include('../views/partials/footer.ejs') %>
+
+</body>
+</html>
